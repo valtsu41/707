@@ -455,9 +455,14 @@ if you contacted me before making any changes to this software.
 			<output>/surface-positions/elevator-norm</output>
 		</pure_gain>
 		
-		<lag_filter name="fcs/pitch-trim-lag">
+		<actuator name="fcs/pitch-trim-actuator">
 			<input>/controls/flight/elevator-trim</input>
-			<c1>14.5</c1> <!-- It's wrong, but that way the autopilot which for some reason uses pitch trim won't break -->
+			<rate_limit>2</rate_limit> <!-- It's wrong, but that way the autopilot which for some reason uses pitch trim won't break -->
+		</actuator>
+		
+		<lag_filter name="fcs/pitch-trim-lag">
+			<input>fcs/pitch-trim-actuator</input>
+			<c1>10.5</c1>
 		</lag_filter>
 		
 		<aerosurface_scale name="fcs/pitch-trim-pos-rad">
