@@ -433,8 +433,8 @@ if you contacted me before making any changes to this software.
  
  <system file="pushback"/>
 
- <flight_control name="707-MK"> <!-- New Roll/Pitch/Yaw FCS by Joshua Davidson (it0uchpods), rest by Marc Kraus (D-MKF1) -->
-	<channel name="Pitch">
+ <flight_control name="707-MK">
+	<channel name="Pitch"> <!-- Begin new Roll/Pitch/Yaw FCS by Joshua Davidson (it0uchpods) -->
 		
 		<lag_filter name="fcs/pitch-lag">
 			<input>/controls/flight/elevator</input>
@@ -457,7 +457,7 @@ if you contacted me before making any changes to this software.
 		
 		<actuator name="fcs/pitch-trim-actuator">
 			<input>/controls/flight/elevator-trim</input>
-			<rate_limit>2</rate_limit> <!-- It's wrong, but that way the autopilot which for some reason uses pitch trim won't break -->
+			<rate_limit>0.02</rate_limit>
 		</actuator>
 		
 		<lag_filter name="fcs/pitch-trim-lag">
@@ -530,6 +530,7 @@ if you contacted me before making any changes to this software.
 		<summer name="fcs/yaw-trim-sum">
 			<input>/controls/flight/rudder</input>
 			<input>/controls/flight/rudder-trim</input>
+			<input>/controls/flight/yaw-damper</input>
 			<clipto>
 				<min>-1.0</min>
 				<max>1.0</max>
@@ -556,7 +557,7 @@ if you contacted me before making any changes to this software.
 			<output>/surface-positions/rudder-norm</output>
 		</pure_gain>
 	
-	</channel>
+	</channel> <!-- End new Roll/Pitch/Yaw FCS by Joshua Davidson (it0uchpods) -->
      
      <channel name="Aeromechanical">
 
