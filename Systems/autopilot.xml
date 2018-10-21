@@ -280,7 +280,7 @@
 					<value>wing-leveler</value>
 				</equals>
 			</condition>
-			<value>0</value>
+			<property>/autopilot/internal/wing-leveler-target-roll-deg</property>
 		</input>
 		<input>/autopilot/internal/target-roll-deg</input>
 		<output>/autopilot/internal/target-roll</output>
