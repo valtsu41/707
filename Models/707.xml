@@ -644,6 +644,7 @@ if you contacted me before making any changes to this software.
 			<and>
 				<not><property>sim/multiplay/generic/int[19]</property></not>
 				<not><property>/sim/rendering/rembrandt/enabled</property></not>
+				<not><property>/sim/rendering/shadows/enabled</property></not>
 			</and>
 		</condition>
 	</animation>v
