@@ -7,8 +7,8 @@
     name:           PW_JT3D-7
     type:           turbine
     thrust:         19000 lb
-    augmented:      no
-    injected  :     no
+    augmented?      no
+    injected?       no
 -->
 
 <turbine_engine name="PW_JT3D-7">
