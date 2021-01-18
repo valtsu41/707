@@ -8,6 +8,6 @@ This is not a complete rewrite.
 ## Objective
 This fork main objective is to continue improving this model.
 ## Code Guidelines
-1- tab and identation size is 4 spaces.
-2- one empty line at the end of the last line of code.
-3- don't forget your ";"s.
+1. tab and identation size is 4 spaces.
+2. one empty line at the end of the last line of code.
+3. don't forget your ";"s.
