@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<rocket_engine name="ROCK">
+  <isp>              500 </isp>
+  <maxthrottle>      1.00 </maxthrottle>
+  <minthrottle>      0 </minthrottle>
+  <slfuelflowmax>   100 </slfuelflowmax>
+  <sloxiflowmax>    100 </sloxiflowmax>
+</rocket_engine>
