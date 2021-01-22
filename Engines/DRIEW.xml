@@ -2,7 +2,7 @@
     <milthrust>    40000 </milthrust>
     <maxthrust>   100000 </maxthrust>
     <bypassratio>     0.5 </bypassratio>
-    <tsfc>            0.5 </tsfc>
+    <tsfc>            0.3 </tsfc>
     <bleed>           0.03</bleed>
     <idlen1>         99.0 </idlen1>
     <idlen2>         99.0 </idlen2>
