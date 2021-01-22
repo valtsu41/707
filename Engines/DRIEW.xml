@@ -1,8 +1,8 @@
 <turbine_engine name="DRIEW">
-    <milthrust>    35000 </milthrust>
-    <maxthrust>    40000 </maxthrust>
+    <milthrust>    40000 </milthrust>
+    <maxthrust>   100000 </maxthrust>
     <bypassratio>     0.5 </bypassratio>
-    <tsfc>            0.8 </tsfc>
+    <tsfc>            0.5 </tsfc>
     <bleed>           0.03</bleed>
     <idlen1>         99.0 </idlen1>
     <idlen2>         99.0 </idlen2>
@@ -16,8 +16,8 @@
             <independentVar lookup="row">velocities/mach</independentVar>
             <tableData>
                 0.0  0
-		1.5  1
-                2.0  1.5
+                1.5  1
+                2.0  6
                 2.4  0
             </tableData>
         </table>
