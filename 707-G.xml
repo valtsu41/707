@@ -254,19 +254,7 @@ if you contacted me before making any changes to this software.
 
  </ground_reactions>
 
- <propulsion>
-  <!-- power tank -->
-  <tank type="FUEL" number="0">
-     <location unit="IN">
-       <x>   0.0 </x>
-       <y>   0.0 </y>
-       <z> -16.65 </z>
-     </location>
-     <capacity unit="LBS"> 300.00 </capacity>
-     <contents unit="LBS"> 300.00 </contents>
-  </tank>
- </propulsion> 
- 
+
  <system file="pushback"/>
 
  <flight_control name="707-MK">
