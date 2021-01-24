@@ -1063,6 +1063,7 @@ var calc_pressurization	= func{
 	var engBleedAir2 = getprop("b707/air-conditioning/eng-bleed-air[1]") or 0;
 	var engBleedAir3 = getprop("b707/air-conditioning/eng-bleed-air[2]") or 0;
 	var engBleedAir4 = getprop("b707/air-conditioning/eng-bleed-air[3]") or 0;
+	var apurpm = getprop("engines/APU/rpm") or 0;
 	engBleedAir1 = (engBleedAir1) ? getprop("engines/engine[0]/n1") : 0;
 	engBleedAir2 = (engBleedAir2) ? getprop("engines/engine[1]/n1") : 0;
 	engBleedAir3 = (engBleedAir3) ? getprop("engines/engine[2]/n1") : 0;
@@ -1074,7 +1075,7 @@ var calc_pressurization	= func{
 	if(comrpm2.getValue() > 115 or overspeedMach > 0.93) settimer(func{air_compressor(1)}, 0);
 	if(comrpm3.getValue() > 115 or overspeedMach > 0.93) settimer(func{air_compressor(2)}, 0);
 	
-	var airSupplyDuct = (engBleedAir1 + engBleedAir2 + engBleedAir3 + engBleedAir4 + comrpm1.getValue() + comrpm2.getValue() + comrpm3.getValue()) / 30 * 6;
+	var airSupplyDuct = (engBleedAir1 + engBleedAir2 + engBleedAir3 + engBleedAir4 + comrpm1.getValue() + comrpm2.getValue() + comrpm3.getValue() + (apurpm * 4)) / 30 * 6;
 	airSupplyDuct = (airSupplyDuct >= 0) ? airSupplyDuct : 0;
 	interpolate("b707/air-conditioning/air-supply-psi", airSupplyDuct, t);
 	
