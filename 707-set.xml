@@ -89,7 +89,7 @@ if you contacted me before making any changes to this software.
 					<name>pushback</name>
 					<binding>
 						 <command>dialog-show</command>
-						 <dialog-name>pushback</dialog-name>
+						 <dialog-name>autopush</dialog-name>
 					</binding>
 				</item>				
 				<item>
@@ -271,7 +271,7 @@ no. D6-3071-00
   	</view> 
  </sim>
 
-	<nasal> 
+	<nasal>
 		<b707>		
 			<file>Aircraft/707/Nasal/shake.nas</file>
 			<file>Aircraft/707/Nasal/autostart.nas</file>

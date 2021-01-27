@@ -61,12 +61,7 @@ if you contacted me before making any changes to this software.
   </instrumentation>
   
   <model>
-	 <pushback>
-		<kp type="double">500</kp>
-		<ki type="double">100</ki>
-		<kd type="double">0</kd>
-		<position-norm type="double">0</position-norm>
-	 </pushback>
+	<autopush include="autopush-config.xml"/>
 	 <door>
 	  <position-x-m type="float">-15.836</position-x-m>
 	  <position-y-m type="float">-1.578</position-y-m>
@@ -282,6 +277,8 @@ if you contacted me before making any changes to this software.
   
 	<aircraft-data>
 		<path>instrumentation/operating-time/total</path>
+		<path>/sim/model/autopush/route/show</path>
+		<path>/sim/model/autopush/route/show-wingtip</path>
 	</aircraft-data>
  </sim>
 
@@ -545,5 +542,33 @@ if you contacted me before making any changes to this software.
 		</door>
 		<jetway-hood-deg type="double">3</jetway-hood-deg>
 	</aircraft>
+	
+	<fdm>
+		<jsbsim>
+			<external_reactions>
+				<tractor>
+					<magnitude alias="/sim/model/autopush/force-lbf"/>
+					<x alias="/sim/model/autopush/force-x"/>
+					<y alias="/sim/model/autopush/force-y"/>
+					<z alias="/sim/model/autopush/force-z"/>
+				</tractor>
+			</external_reactions>
+		</jsbsim>
+	</fdm>
+	
+	<nasal>
+		<autopush>
+			<file>Nasal/Autopush/autopush.nas</file>
+		</autopush>
+		<autopush_driver>
+			<file>Nasal/Autopush/driver.nas</file>
+		</autopush_driver>
+		<dynarr>
+			<file>Nasal/Autopush/dynarr.nas</file>
+		</dynarr>
+		<autopush_route>
+			<file>Nasal/Autopush/route.nas</file>
+		</autopush_route>
+	</nasal>
 
 </PropertyList>

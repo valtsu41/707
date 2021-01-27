@@ -431,7 +431,6 @@ if you contacted me before making any changes to this software.
 
  </propulsion> 
  
- <system file="pushback"/>
 
  <flight_control name="707-MK">
 	<channel name="Pitch"> <!-- Begin new Roll/Pitch/Yaw FCS by Joshua Davidson (it0uchpods) -->
@@ -1153,18 +1152,18 @@ if you contacted me before making any changes to this software.
  </aerodynamics>
  
  <external_reactions>
-	 <force name="pushback" frame="BODY">
-		<location unit="IN">
-		 <x>  -139 </x>
-		 <y>    0.0 </y>
-		 <z>  -71.0 </z>
-		</location>
-		<direction>
-		 <x>1</x>
-		 <y>0</y>
-		 <z>0</z>
-		</direction>
-	 </force>
+     <force name="tractor" frame="BODY">
+        <location unit="IN">
+            <x> -618.44 </x>
+            <y>   0.00 </y>
+            <z> -114.00 </z>
+        </location>
+        <direction>
+            <x>1.0</x>
+            <y>0.0</y>
+            <z>0.0</z>
+        </direction>
+     </force>
  </external_reactions>
   
 </fdm_config>

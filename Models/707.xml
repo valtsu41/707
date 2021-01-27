@@ -251,14 +251,14 @@ if you contacted me before making any changes to this software.
 
 <!-- Externe -->
 	<model>
-	 <name>Pushback</name>
-	 <path>Models/Airport/Pushback/Goldhofert.xml</path>
-	 <offsets>
-		<x-m>-17.5</x-m>
-		<y-m>0</y-m>
-		<z-m>-2.9</z-m>
-	 </offsets>
-	</model>
+		<name>Pushback</name>
+		<path>Autopush/Goldhofert.xml</path>
+			<offsets>
+				<x> -618.44 </x>
+				<y>   0.00 </y>
+				<z> -114.00 </z>
+			</offsets>
+		</model>
 	
 	<model>
 	 <name>ExternalPowerUnit</name>
